@@ -15,7 +15,7 @@
 :swift: 4.1
 :license: MIT
 :sep: %20%7C%20
-:platform: iOS{sep}macOS{sep}watchOS{sep}tvOS{sep}Linux
+:platform: iOS
 // :toc: left
 :toclevels: 6
 :toc-title: TOC
