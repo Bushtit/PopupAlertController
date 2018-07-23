@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="WxK-gi-bKl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9so-0l-Vd9">
+                                <rect key="frame" x="16" y="484" width="343" height="45"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="1" blue="1" alpha="0.7981681034" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Show Image Dialog"/>
+                                <connections>
+                                    <action selector="showImageDialogTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YpK-sn-UaM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8b-rA-OMe">
+                                <rect key="frame" x="16" y="543" width="343" height="45"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Show Standard Dialog"/>
+                                <connections>
+                                    <action selector="showStandardDialogTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lxq-gh-t57"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D62-Vv-8KZ">
+                                <rect key="frame" x="16" y="602" width="343" height="45"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="1" blue="1" alpha="0.80479525860000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jyF-bW-M4w"/>
+                                </constraints>
+                                <state key="normal" title="Show Custom Dialog"/>
+                                <connections>
+                                    <action selector="showCustomDialogTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcS-Pz-g3i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfp-s9-ahn">
+                                <rect key="frame" x="16" y="423" width="343" height="45"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="1" blue="1" alpha="0.7981681034" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Apply Dark Theme"/>
+                                <connections>
+                                    <action selector="applyTheme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLd-cS-miT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D62-Vv-8KZ" secondAttribute="trailing" constant="16" id="6DR-PA-nTW"/>
+                            <constraint firstItem="9so-0l-Vd9" firstAttribute="top" secondItem="Vfp-s9-ahn" secondAttribute="bottom" constant="14" id="C09-7A-PzF"/>
+                            <constraint firstItem="Vfp-s9-ahn" firstAttribute="trailing" secondItem="9so-0l-Vd9" secondAttribute="trailing" id="Hlj-Og-OG0"/>
+                            <constraint firstItem="N8b-rA-OMe" firstAttribute="height" secondItem="D62-Vv-8KZ" secondAttribute="height" id="MfC-PS-JK5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WxK-gi-bKl" secondAttribute="trailing" id="O3i-8J-b0i"/>
+                            <constraint firstItem="N8b-rA-OMe" firstAttribute="top" secondItem="9so-0l-Vd9" secondAttribute="bottom" constant="14" id="PMd-1I-cpd"/>
+                            <constraint firstItem="9so-0l-Vd9" firstAttribute="leading" secondItem="N8b-rA-OMe" secondAttribute="leading" id="PZo-zz-7on"/>
+                            <constraint firstItem="Vfp-s9-ahn" firstAttribute="height" secondItem="9so-0l-Vd9" secondAttribute="height" id="Pi1-fy-juF"/>
+                            <constraint firstItem="Vfp-s9-ahn" firstAttribute="leading" secondItem="9so-0l-Vd9" secondAttribute="leading" id="Wts-dZ-y59"/>
+                            <constraint firstItem="WxK-gi-bKl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a7U-fd-vyn"/>
+                            <constraint firstItem="D62-Vv-8KZ" firstAttribute="top" secondItem="N8b-rA-OMe" secondAttribute="bottom" constant="14" id="cnq-bb-rDX"/>
+                            <constraint firstAttribute="bottom" secondItem="WxK-gi-bKl" secondAttribute="bottom" id="dEt-Fr-clp"/>
+                            <constraint firstItem="9so-0l-Vd9" firstAttribute="height" secondItem="N8b-rA-OMe" secondAttribute="height" id="ggj-oU-al5"/>
+                            <constraint firstItem="9so-0l-Vd9" firstAttribute="trailing" secondItem="N8b-rA-OMe" secondAttribute="trailing" id="jZB-bZ-TDr"/>
+                            <constraint firstItem="WxK-gi-bKl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kRo-4f-cmd"/>
+                            <constraint firstItem="N8b-rA-OMe" firstAttribute="trailing" secondItem="D62-Vv-8KZ" secondAttribute="trailing" id="kce-pg-jqx"/>
+                            <constraint firstItem="N8b-rA-OMe" firstAttribute="leading" secondItem="D62-Vv-8KZ" secondAttribute="leading" id="s41-4S-GTr"/>
+                            <constraint firstItem="D62-Vv-8KZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vRy-aE-rsM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D62-Vv-8KZ" secondAttribute="bottom" constant="20" id="zBu-I9-sQi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="WxK-gi-bKl" id="DCQ-yc-wg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cover" width="1280" height="2548"/>
+    </resources>
+</document>
