@@ -25,8 +25,8 @@ open class PopupButton: UIButton {
     
     /// The title color of the button
     @objc open dynamic var titleColor: UIColor? {
-        get { return self.titleColor(for: UIControlState()) }
-        set { setTitleColor(newValue, for: UIControlState()) }
+        get { return self.titleColor(for: UIControl.State()) }
+        set { setTitleColor(newValue, for: UIControl.State()) }
     }
 
     /// The background color of the button
@@ -101,7 +101,7 @@ open class PopupButton: UIButton {
         super.init(frame: .zero)
 
         // Set the button title
-        setTitle(title, for: UIControlState())
+        setTitle(title, for: UIControl.State())
 
         self.dismissOnTap = dismissOnTap
 
@@ -118,7 +118,7 @@ open class PopupButton: UIButton {
     open func setupView() {
 
         // Default appearance
-        setTitleColor(defaultTitleColor, for: UIControlState())
+        setTitleColor(defaultTitleColor, for: UIControl.State())
         titleLabel?.font              = defaultTitleFont
         backgroundColor               = defaultButtonColor
         separator.backgroundColor     = defaultSeparatorColor

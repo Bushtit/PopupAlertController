@@ -1,22 +1,24 @@
 PODS:
-  - DynamicBlurView (2.0.2)
-  - PopupAlertController (1.0.0):
-    - DynamicBlurView (~> 2.0)
+  - EABlurView (1.0.0):
+    - EABlurView/Core (= 1.0.0)
+  - EABlurView/Core (1.0.0)
+  - PopupAlertController (1.1.0):
+    - EABlurView
 
 DEPENDENCIES:
   - PopupAlertController (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - DynamicBlurView
+    - EABlurView
 
 EXTERNAL SOURCES:
   PopupAlertController:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
-  PopupAlertController: a92cfdcf50e5a463ac543b4e50dd48442125a611
+  EABlurView: 832b77e54d9a7a9759b50c76c6440ee4172067b1
+  PopupAlertController: 8d0fa6783f3aefcb83ab878636ef880042b7eef7
 
 PODFILE CHECKSUM: a19124d2ebe9982a9ea98fae9b8019fa2920628c
 

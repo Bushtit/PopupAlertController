@@ -5,7 +5,7 @@
 //
 
 import Foundation
-import DynamicBlurView
+import EABlurView
 
 /// The (blurred) overlay view below the popup dialog
 final public class PopupOverlayView: UIView {
@@ -51,8 +51,8 @@ final public class PopupOverlayView: UIView {
 
     // MARK: - Views
 
-    internal lazy var blurView: DynamicBlurView = {
-        let blurView = DynamicBlurView(frame: .zero)
+    internal lazy var blurView: EABlurView = {
+        let blurView = EABlurView(frame: .zero)
         blurView.blurRadius = 8
         blurView.trackingMode = .none
         blurView.isDeepRendering = true

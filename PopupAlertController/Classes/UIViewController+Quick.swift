@@ -13,7 +13,7 @@ extension UIViewController {
                          message: String,
                          image: UIImage?,
                          buttons: [String],
-                         alignment: UILayoutConstraintAxis = .horizontal,
+                         alignment: NSLayoutConstraint.Axis = .horizontal,
                          animated: Bool = true,
                          transition: PopupTransitionStyle = .zoomIn,
                          gestureDismissal: Bool = true,
@@ -33,7 +33,7 @@ extension UIViewController {
         
         var actions = [PopupButton]()
         for btn in buttons {
-            if let index = buttons.index(of: btn) {
+            if let index = buttons.firstIndex(of: btn) {
                 actions.append(PopupNormalButton.init(title: NSLocalizedString(btn, comment: "")) {
                     action?(btn, index)
                 })
@@ -55,7 +55,7 @@ extension UIViewController {
     
     open func showDialog(controller: UIViewController,
                          buttons: [String],
-                         alignment: UILayoutConstraintAxis = .horizontal,
+                         alignment: NSLayoutConstraint.Axis = .horizontal,
                          animated: Bool = true,
                          transition: PopupTransitionStyle = .zoomIn,
                          gestureDismissal: Bool = true,
@@ -73,7 +73,7 @@ extension UIViewController {
         
         var actions = [PopupButton]()
         for btn in buttons {
-            if let index = buttons.index(of: btn) {
+            if let index = buttons.firstIndex(of: btn) {
                 actions.append(PopupNormalButton.init(title: NSLocalizedString(btn, comment: "")) {
                     action?(btn, index)
                 })
